@@ -19,7 +19,7 @@ _main.py_ - main file.
 ### Running the code
 To compare the preformance of the developed verification-based algorithm to the regular algorithm, follow these steps: <br/>
 1) Pick the wanted algorithm by placing its name in the "runs" list in line  of main.py. <br/>
-2) At main.py, add the wanted layout of your choice to the environment, and set the size of your board. The method _train_ recives as a parameter the maximum amount of episodes. Set the parameter max_time in the cosen algorithm's file to the number of seconds you wish the algorithm will run. The parameters and hyperparameters are already initialized like they were in the results shown in the paper. <br/>
+2) At main.py, add the wanted layout of your choice to the environment, and set the size of your board. The method _train_ recives as a parameter the maximum amount of episodes. Set the parameter max_time in the chosen algorithm's file to the number of seconds you wish the algorithm will run. <br/>
 3) Run main.py
 
 ### Results

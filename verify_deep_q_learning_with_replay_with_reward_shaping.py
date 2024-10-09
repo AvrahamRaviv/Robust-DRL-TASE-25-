@@ -79,8 +79,8 @@ class verify_deep_q_learning_with_replay_with_reward_shaping():
 
     def train(self, num_episodes,apply_verification_fix):
         self.q_network_init.load_state_dict(self.q_network.state_dict())
-        self.optimizer = optim.Adam(self.q_network.parameters(), lr=0.001)
-        self.optimizer2 = optim.Adam(self.q_network_init.parameters(), lr=0.001)
+        self.optimizer = optim.Adam(self.q_network.parameters(), lr=0.01)
+        self.optimizer2 = optim.Adam(self.q_network_init.parameters(), lr=0.01)
         self.memory = ReplayMemory(30000)
         self.rewards_list = []
         self.gamma = 0.8

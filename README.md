@@ -9,12 +9,12 @@ onnx 1.16.2 <br/>
 torch 2.4.1 
 
 ### Algorithms
-verify_deep_q_learning_with_replay_with_reward_shaping.py - standard DQN with replay buffer and reward shaping. <br/>
-verify_double_deep_v1.py - the original Double Deep Q-Learning Algorithm. <br/>
-verify_double_deep_v2.py - the revised Double Deep Q-learning Algorithm. <br/>
-check_verification_group_1_in_model.py, check_verification_group_2_in_model.py - responsible for verifying properties in the model. <br/>
-Frozen_Lake_Environment.py - implementation of the environment.<br/>
-main.py - main file.<br/>
+_verify_deep_q_learning_with_replay_with_reward_shaping.py_ - standard DQN with replay buffer and reward shaping. <br/>
+_verify_double_deep_v1.py _- the original Double Deep Q-Learning Algorithm. <br/>
+_verify_double_deep_v2.py_ - the revised Double Deep Q-learning Algorithm. <br/>
+_check_verification_group_1_in_model.py, check_verification_group_2_in_model.py_ - responsible for verifying properties in the model. <br/>
+_Frozen_Lake_Environment.py _- implementation of the environment.<br/>
+_main.py _- main file.<br/>
 
 ### Running the code
 To compare the preformance of the developed verification-based algorithm to the regular algorithm, follow these steps: <br/>

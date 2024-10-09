@@ -16,7 +16,7 @@ _verify_double_deep_v2.py_ - the revised Double Deep Q-learning Algorithm. <br/>
 _check_verification_group_1_in_model.py, check_verification_group_2_in_model.py_ - responsible for verifying properties in the model. <br/><br/>
 _Frozen_Lake_Environment.py_ - implementation of the environment.<br/><br/>
 _main.py_ - main file.
-The method _train_ at the algorithms' files takes as input the maximum number of episodes as well as whether to use the developed verification-based backpropagation. 
+The method _train_ at the algorithms' files takes as input the maximum number of episodes as well as whether to use the developed verification-based algorithm. 
 ### Running the code
 To compare the preformance of the developed verification-based backpropagation algorithm to the standard algorithms, follow these steps: <br/>
 1) Pick the wanted algorithm by placing its name in the "runs" list in line  of main.py. <br/>

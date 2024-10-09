@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 from ReplayMemory import ReplayMemory
-from check_loops_with_marabou import marabou_loop_finder
-from check_verifications_in_model import marbou_walks_down_to_holes_finder, marbou_walks_up_to_holes_finder, \
+from check_verification_group_2_in_model import marabou_loop_finder
+from check_verification_group_1_in_model import marbou_walks_down_to_holes_finder, marbou_walks_up_to_holes_finder, \
     marbou_walks_left_to_holes_finder, marbou_walks_right_to_holes_finder
 import sys, os
 def blockPrint():

@@ -14,7 +14,7 @@ _verify_double_deep_v1.py_ - the original Double Deep Q-Learning Algorithm. <br/
 _verify_double_deep_v2.py_ - the revised Double Deep Q-learning Algorithm. <br/><br/>
 _check_verification_group_1_in_model.py, check_verification_group_2_in_model.py_ - responsible for verifying properties in the model. <br/><br/>
 _Frozen_Lake_Environment.py_ - implementation of the environment.<br/><br/>
-_main.py_- main file.
+_main.py_ - main file.
 
 ### Running the code
 To compare the preformance of the developed verification-based algorithm to the regular algorithm, follow these steps: <br/>

@@ -1,4 +1,5 @@
 # Robust Deep Reinforcement Learning Agents Using Formal Verification
+
 In the Frozen Lake environment, the goal is to move an agent to a specific coordinate on a grid while avoiding obstacles, referred to as ”holes.” The agent can take steps in four directions: north, south, east, or west. To increase complexity, the agent must learn to navigate from any possible starting position on the board to the goal, as there is no fixed starting state. Each environment initialization starts the agent in a new random position that is not occupied by a hole or the goal. The success rate of the trained network is measured by calculating the percentage of states from which the agent successfully navigates to the goal, following the policy learned by the network.
 
 ### Requirements
@@ -17,7 +18,7 @@ _Frozen_Lake_Environment.py_ - implementation of the environment.<br/><br/>
 _main.py_ - main file.
 
 ### Running the code
-To compare the preformance of the developed verification-based algorithm to the regular algorithm, follow these steps: <br/>
+To compare the preformance of the developed verification-based backpropagation algorithm to the standard algorithms, follow these steps: <br/>
 1) Pick the wanted algorithm by placing its name in the "runs" list in line  of main.py. <br/>
 2) At main.py, add the wanted layout of your choice to the environment, and set the size of your board. The method _train_ recives as a parameter the maximum amount of episodes. Set the parameter max_time in the chosen algorithm's file to the number of seconds you wish the algorithm will run. <br/>
 3) Run main.py

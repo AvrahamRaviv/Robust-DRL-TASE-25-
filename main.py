@@ -3,8 +3,8 @@ import time
 from verify_deep_q_learning_with_replay_with_reward_shaping import \
     verify_deep_q_learning_with_replay_with_reward_shaping
 from Frozen_Lake_Environment import Frozen_Lake_Environment
-from verify_deep_q_learning_with_target_network import verify_deep_q_learning_with_target_network
-from verify_double_deep_2015 import verify_double_deep_2015
+from verify_double_deep_v1 import verify_deep_q_learning_with_target_network
+from verify_double_deep_v2 import verify_double_deep_2015
 
 
 runs = ['verify_deep_q_learning_with_target_network']

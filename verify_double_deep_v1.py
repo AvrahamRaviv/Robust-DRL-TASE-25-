@@ -88,7 +88,7 @@ class verify_deep_q_learning_with_target_network():
         self.gamma = 0.8
         self.epsilon = 1
         start_count = time.time()
-        max_time = 20
+        max_time = 90
         for episode in range(num_episodes):
             if ((time.time()-start_count) > max_time):
 

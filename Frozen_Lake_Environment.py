@@ -416,4 +416,200 @@ class Frozen_Lake_Environment:
         self.board[0] = 'S'  # First corner is reserved for Start
         self.board[self.SIZE * self.SIZE - 1] = 'G'  # Last corner is reserved for Goal
 
+    def add_layout_10_2(self):
+        self.hole_index_list.append(3)
+        self.board[3] = 'H'
+        self.hole_index_list.append(4)
+        self.board[4] = 'H'
+        self.hole_index_list.append(5)
+        self.board[5] = 'H'
+        self.hole_index_list.append(6)
+        self.board[6] = 'H'
+        self.hole_index_list.append(7)
+        self.board[7] = 'H'
+        self.hole_index_list.append(8)
+        self.board[8] = 'H'
+        self.hole_index_list.append(9)
+        self.board[9] = 'H'
+        #self.hole_index_list.append(10)
+        #self.board[10] = 'H'
+        self.hole_index_list.append(11)
+        self.board[11] = 'H'
+        self.hole_index_list.append(12)
+        self.board[12] = 'H'
+        self.hole_index_list.append(13)
+        self.board[13] = 'H'
+        self.hole_index_list.append(14)
+        self.board[14] = 'H'
+        self.hole_index_list.append(15)
+        self.board[15] = 'H'
+        self.hole_index_list.append(16)
+        self.board[16] = 'H'
+        self.hole_index_list.append(17)
+        self.board[17] = 'H'
+        self.hole_index_list.append(18)
+        self.board[18] = 'H'
+        self.hole_index_list.append(19)
+        self.board[19] = 'H'
+        #self.hole_index_list.append(20)
+        #self.board[20] = 'H'
+        #self.hole_index_list.append(21)
+        #self.board[21] = 'H'
+        #self.hole_index_list.append(22)
+        #self.board[22] = 'H'
+        #self.hole_index_list.append(23)
+        #self.board[23] = 'H'
+        #self.hole_index_list.append(24)
+        #self.board[24] = 'H'
+        #self.hole_index_list.append(25)
+        #self.board[25] = 'H'
+        #self.hole_index_list.append(26)
+        #self.board[26] = 'H'
+        self.hole_index_list.append(27)
+        self.board[27] = 'H'
+        self.hole_index_list.append(28)
+        self.board[28] = 'H'
+        self.hole_index_list.append(29)
+        self.board[29] = 'H'
+        self.hole_index_list.append(30)
+        self.board[30] = 'H'
+        self.hole_index_list.append(31)
+        self.board[31] = 'H'
+        self.hole_index_list.append(32)
+        self.board[32] = 'H'
+        self.hole_index_list.append(33)
+        self.board[33] = 'H'
+        self.hole_index_list.append(34)
+        self.board[34] = 'H'
+        self.hole_index_list.append(35)
+        self.board[35] = 'H'
+        #self.hole_index_list.append(36)
+        #self.board[36] = 'H'
+        self.hole_index_list.append(37)
+        self.board[37] = 'H'
+        self.hole_index_list.append(38)
+        self.board[38] = 'H'
+        self.hole_index_list.append(39)
+        self.board[39] = 'H'
+        self.hole_index_list.append(40)
+        self.board[40] = 'H'
+        self.hole_index_list.append(41)
+        self.board[41] = 'H'
+        self.hole_index_list.append(42)
+        self.board[42] = 'H'
+        self.hole_index_list.append(43)
+        self.board[43] = 'H'
+        self.hole_index_list.append(44)
+        self.board[44] = 'H'
+        self.hole_index_list.append(45)
+        self.board[45] = 'H'
+        #self.hole_index_list.append(46)
+        #self.board[46] = 'H'
+        self.hole_index_list.append(47)
+        self.board[47] = 'H'
+        self.hole_index_list.append(48)
+        self.board[48] = 'H'
+        self.hole_index_list.append(49)
+        self.board[49] = 'H'
+        self.hole_index_list.append(50)
+        self.board[50] = 'H'
+        self.hole_index_list.append(51)
+        self.board[51] = 'H'
+        self.hole_index_list.append(52)
+        self.board[52] = 'H'
+        self.hole_index_list.append(53)
+        self.board[53] = 'H'
+        self.hole_index_list.append(54)
+        self.board[54] = 'H'
+        self.hole_index_list.append(55)
+        self.board[55] = 'H'
+        #self.hole_index_list.append(56)
+        #self.board[56] = 'H'
+        #self.hole_index_list.append(57)
+        #self.board[57] = 'H'
+        #self.hole_index_list.append(58)
+        #self.board[58] = 'H'
+        self.hole_index_list.append(59)
+        self.board[59] = 'H'
+        self.hole_index_list.append(60)
+        self.board[60] = 'H'
+        self.hole_index_list.append(61)
+        self.board[61] = 'H'
+        self.hole_index_list.append(62)
+        self.board[62] = 'H'
+        self.hole_index_list.append(63)
+        self.board[63] = 'H'
+        self.hole_index_list.append(64)
+        self.board[64] = 'H'
+        self.hole_index_list.append(65)
+        self.board[65] = 'H'
+        self.hole_index_list.append(66)
+        self.board[66] = 'H'
+        self.hole_index_list.append(67)
+        self.board[67] = 'H'
+        #self.hole_index_list.append(68)
+        #self.board[68] = 'H'
+        self.hole_index_list.append(69)
+        self.board[69] = 'H'
+        self.hole_index_list.append(70)
+        self.board[70] = 'H'
+        self.hole_index_list.append(71)
+        self.board[71] = 'H'
+        self.hole_index_list.append(72)
+        self.board[72] = 'H'
+        self.hole_index_list.append(73)
+        self.board[73] = 'H'
+        self.hole_index_list.append(74)
+        self.board[74] = 'H'
+        self.hole_index_list.append(75)
+        self.board[75] = 'H'
+        self.hole_index_list.append(76)
+        self.board[76] = 'H'
+        self.hole_index_list.append(77)
+        self.board[77] = 'H'
+        #self.hole_index_list.append(78)
+        #self.board[78] = 'H'
+        self.hole_index_list.append(79)
+        self.board[79] = 'H'
+        self.hole_index_list.append(80)
+        self.board[80] = 'H'
+        self.hole_index_list.append(81)
+        self.board[81] = 'H'
+        self.hole_index_list.append(82)
+        self.board[82] = 'H'
+        self.hole_index_list.append(83)
+        self.board[83] = 'H'
+        self.hole_index_list.append(84)
+        self.board[84] = 'H'
+        #self.hole_index_list.append(85)
+        #self.board[85] = 'H'
+        #self.hole_index_list.append(86)
+        #self.board[86] = 'H'
+        #self.hole_index_list.append(87)
+        #self.board[87] = 'H'
+        #self.hole_index_list.append(88)
+        #self.board[88] = 'H'
+        self.hole_index_list.append(89)
+        self.board[89] = 'H'
+        self.hole_index_list.append(90)
+        self.board[90] = 'H'
+        self.hole_index_list.append(91)
+        self.board[91] = 'H'
+        self.hole_index_list.append(92)
+        self.board[92] = 'H'
+        self.hole_index_list.append(93)
+        self.board[93] = 'H'
+        self.hole_index_list.append(94)
+        self.board[94] = 'H'
+        self.hole_index_list.append(95)
+        self.board[95] = 'H'
+        self.hole_index_list.append(96)
+        self.board[96] = 'H'
+        self.hole_index_list.append(97)
+        self.board[97] = 'H'
+        #self.hole_index_list.append(98)
+        #self.board[98] = 'H'
+        self.board[0] = 'S'  # First corner is reserved for Start
+        self.board[self.SIZE * self.SIZE - 1] = 'G'  # Last corner is reserved for Goal
+
 

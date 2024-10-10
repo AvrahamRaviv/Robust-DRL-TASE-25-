@@ -87,13 +87,13 @@ if __name__ == '__main__':
         print()
 
         # Length\Width of square-shaped board
-        size = 3
+        size = 10
         env2 = Frozen_Lake_Environment(size)
         env = Frozen_Lake_Environment(size)
         env.print_environment_parameters()
         env2.print_environment_parameters()
-        env.add_layout_3_2()
-        env2.add_layout_3_2()
+        env.add_layout_10_2()
+        env2.add_layout_10_2()
         env.return_all_down_critical_states()
         env.print_environment_parameters()
         env.print_on_board_current_state()

@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 from ReplayMemory import ReplayMemory
+from check_hole_properties_without_marabou import verify_and_fix_holes_without_marabou
 from check_verification_group_2_in_model import marabou_loop_finder
 from check_verification_group_1_in_model import marbou_walks_down_to_holes_finder, marbou_walks_up_to_holes_finder, \
     marbou_walks_left_to_holes_finder, marbou_walks_right_to_holes_finder
@@ -24,8 +25,8 @@ class verify_deep_q_learning_with_target_network():
         self.time_list = []
         self.epsilon = 1.0  # Exploration parameter
         self.max_epsilon = 1.0  # Max for exploration
-        self.min_epsilon = 0.01  # Min for exploration
-        self.decay_rate = 0.001  # Exponential decay factor
+        self.min_epsilon = 0.05  # Min for exploration
+        self.decay_rate = 0.00001  # Exponential decay factor
         self.Transition =namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
 
         # Define the Q-network
@@ -81,14 +82,14 @@ class verify_deep_q_learning_with_target_network():
     def train(self, num_episodes,apply_verification_fix):
         self.q_network_init.load_state_dict(self.q_network.state_dict())
         self.target_network.load_state_dict(self.q_network.state_dict())
-        self.optimizer = optim.Adam(self.q_network.parameters(), lr=0.01)
-        self.optimizer2 = optim.Adam(self.q_network_init.parameters(), lr=0.01)
+        self.optimizer = optim.Adam(self.q_network.parameters(), lr=0.001)
+        self.optimizer2 = optim.Adam(self.q_network_init.parameters(), lr=0.001)
         self.memory = ReplayMemory(30000)
         self.rewards_list = []
         self.gamma = 0.8
         self.epsilon = 1
         start_count = time.time()
-        max_time = 90
+        max_time = 120
         for episode in range(num_episodes):
             if ((time.time()-start_count) > max_time):
 
@@ -129,7 +130,7 @@ class verify_deep_q_learning_with_target_network():
                     action = torch.tensor([[self.env.get_random_action().value]], dtype=torch.long)
 
 
-                next_state, reward, done = self.env.stepWithRewardShaping(action.item())
+                next_state, reward, done = self.env.step(action.item())
 
                 new_state_arr = np.zeros(self.state_size)
                 new_state_arr[next_state] = 1
@@ -185,11 +186,12 @@ class verify_deep_q_learning_with_target_network():
 
             if apply_verification_fix:
                 start = time.time()
-                self.verify_and_fix()
+                #self.verify_and_fix()
+                verify_and_fix_holes_without_marabou(self)
                 self.time_list.append(time.time() - start)
             self.rewards_list.append(total_reward_for_ep)
 
-            if episode%5 == 0:
+            if episode%10 == 0:
                 self.target_network.load_state_dict(self.q_network_init.state_dict())
 
         enablePrint()

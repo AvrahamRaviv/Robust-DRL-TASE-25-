@@ -100,7 +100,7 @@ if __name__ == '__main__':
         agent = verify_deep_q_learning_with_target_network(env, size, env2)
         apply_verification_fix = True
         start_algo = time.time()
-        agent.train(1000, apply_verification_fix)
+        agent.train(1000000, apply_verification_fix)
         start = []
         for i in range(size * size - 1):
             if i not in env.hole_index_list:
@@ -120,7 +120,7 @@ if __name__ == '__main__':
 
         apply_verification_fix = False
         start_algo = time.time()
-        agent.train(200000, apply_verification_fix)
+        agent.train(200000000, apply_verification_fix)
         start = []
         for i in range(size * size - 1):
             if i not in env.hole_index_list:

@@ -14,7 +14,7 @@ def invalid_action(current_state_index, action,SIZE):
     else:
         return False
 def verify_and_fix_holes_without_marabou(self):
-    reward_fix = -1
+    reward_fix = -2
     # Right critical states
     right_critical_states = self.env.return_all_right_critical_states()
     for stateIndex in reversed(right_critical_states):
@@ -169,7 +169,7 @@ def verify_and_fix_holes_without_marabou(self):
                 self.optimizer2.step()
                 break
 
-    '''
+
     stateIndex = self.env.reset()
     path = []
     path.append(stateIndex)
@@ -200,8 +200,6 @@ def verify_and_fix_holes_without_marabou(self):
             # Turing the state from an int to a pytorch tensor
             ns = torch.tensor(next_state_arr, dtype=torch.float32).unsqueeze(0)
 
-            # Turing the reward from an int to a pytorch tensor
-            reward = torch.tensor(reward, dtype=torch.float32)
 
             # Update Q-value using the Q-learning update rule
             with torch.no_grad():
@@ -219,44 +217,12 @@ def verify_and_fix_holes_without_marabou(self):
             self.optimizer2.step()
             break
         if (next_state in path):
-            for state in path:
-                stateIndex = self.env.reset(state)
-                new_state_arr = np.zeros(self.state_size)
-                new_state_arr[stateIndex] = 1
-                # Turing the state from an int to a pytorch tensor
-                state = torch.tensor(new_state_arr, dtype=torch.float32).unsqueeze(0)
-                with torch.no_grad():
-                    action = self.q_network_init(state).argmax()
-                    action = torch.tensor([[action]])
-
-                next_state, reward, done, suc = self.env.stepWithRewardShapingTest(action.item())
-                # stepped outside board
-                next_state_arr = np.zeros(self.state_size)
-                next_state_arr[next_state] = 1
-                # Turing the state from an int to a pytorch tensor
-                ns = torch.tensor(next_state_arr, dtype=torch.float32).unsqueeze(0)
-
-
-                # Update Q-value using the Q-learning update rule
-                with torch.no_grad():
-                    random_num = random.uniform(0, 1)
-                    if random_num > 0.5:
-                        target = -0.5 + self.gamma * torch.max(self.q_network_init(ns))
-                    else:
-                        target = -0.5 + self.gamma * torch.max(self.target_network(ns))
-
-                current = (torch.max(self.q_network_init(state)))
-                # Calculating loss
-                loss = self.criterion(current, target)
-                self.optimizer2.zero_grad()
-                loss.backward()
-                self.optimizer2.step()
-            break
+                break
         path.append(next_state)
         new_state_arr = np.zeros(self.state_size)
         new_state_arr[next_state] = 1
         next_state = torch.tensor(new_state_arr, dtype=torch.float32).unsqueeze(0)
         state = next_state
-        '''
+
 
 

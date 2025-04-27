@@ -1,3 +1,5 @@
+An official implementation of "Robust Deep Reinforcement Learning Using Formal Verification" (TASE 2025).
+
 # Robust Deep Reinforcement Learning Agents Using Formal Verification
 
 In the Frozen Lake environment, the goal is to move an agent to a specific coordinate on a grid while avoiding obstacles, referred to as ”holes.” The agent can take steps in four directions: north, south, east, or west. To increase complexity, the agent must learn to navigate from any possible starting position on the board to the goal, as there is no fixed starting state. Each environment initialization starts the agent in a new random position that is not occupied by a hole or the goal. The success rate of the trained network is measured by calculating the percentage of states from which the agent successfully navigates to the goal, following the policy learned by the network.
